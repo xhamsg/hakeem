@@ -1,0 +1,408 @@
+@import './styles/media-queries.css';
+
+
+
+:root {
+    
+    margin: 0 32px;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    background-color: inherit;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: #141414;
+}
+ul,li {
+    list-style: none;
+    color: #3d3d3d;
+}
+h1 {
+    font-size: 2rem;
+    color: #000;
+}
+h2 {
+    font-size: 2.3rem;
+    color: #202020;
+}
+h3 {
+    font-size: 1.8rem;
+    color: #202020;
+}
+h4 {
+    font-size: 1.4rem;
+    color: #202020;
+}
+p {
+    font-size: 2rem;
+    color: #3d3d3d;
+}
+section {
+    width: 100%;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+}
+.grid-col-1 {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 15px;
+}
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+.grid-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+.grid-col-4 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+/* Navbar Styles Starts Here */
+
+nav {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top:0;
+    padding: 30px 30px 10px 30px;
+}
+
+.menu-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 1111;
+}
+.bars-container {
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    margin-right: auto;
+    left: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: inherit;
+
+    span {
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: all 0.2s ease;
+    }
+    span:nth-child(1) {
+        top: 30%;
+    }
+    span:nth-child(3) {
+        top: 70%;
+    }
+    span:nth-child(4) {
+        top: 100%;
+    }
+}
+
+.bars-container.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.bars-container.active span:nth-child(2) {
+    opacity: 0;
+}
+.bars-container.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.nav-logo {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav-links>ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 13px;
+    font-size: 1.8rem;
+}
+.nav-links>a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Navbar Styles Ends Here */
+
+/* Hero Section Starts */
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/hero-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: "Noto Nastaliq Urdu", serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+}
+.header-text {
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    position: absolute;
+    top: 12rem;
+
+    h1 {
+        font-size: 4.3rem;
+    }
+
+    h4 {
+        font-size: 2.6rem;
+    }
+}
+.header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10rem;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+/* Main Section Starts Here */
+
+main {
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Nastaliq Urdu", serif;
+    text-align: right;
+}
+
+.sugar-medic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 50px;
+
+    h2 {
+        font-size: 2.1rem;
+    }
+
+    p {
+       font-size: 1.8rem;
+    }
+}
+
+.sugar-medic-container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.sugar-medic-img {
+    display: inline-block;
+
+}
+
+.joints-pain-medic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+
+
+    h2 {
+        font-size: 2.1rem;
+    }
+
+    p {
+       font-size: 1.8rem;
+    }
+}
+
+.joints-pain-medic-container {
+    width: 100%;
+    height: 100%;
+}
+
+.sugar-medic-img  img {
+            width: auto;
+            height: auto;
+    }
+
+    .joints-pain-medic-container-img img {
+        width: auto;
+        height: auto;
+}
+
+/* Main Section Ends Here */
+
+
+
+
+
+
+/* Media Queries For Different Screen Sizes */
+
+
+
+/* breakpoint-xs-width: 400px; */
+/* breakpoint-s-width: 768px; */
+/* breakpoint-m-width: 1024px; */
+/* breakpoint-l-width: 1440px; */
+
+
+
+@media (max-width: 400px) {
+    :root {
+        margin: 0;
+    }
+
+    .header-text>h4 { 
+        margin-top: 0px;
+}
+    /* .sugar-medic-img {
+        width: 750px;
+        height: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            margin: 0 auto;
+            width: inherit;
+            height: inherit;
+        }
+    } */
+
+    /* .joints-pain-medic-container-img {
+        width: 100%;
+        height: 100%;
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    } */
+}
+
+@media (max-width: 564px){
+    .header-text {
+    top: 0;
+
+    h1 {
+        font-size: 4rem;
+    }
+    h4 {
+        position: absolute;
+        top: 20rem;
+    }
+}
+}
+
+@media (max-width: 768px) {
+    .bars-container {
+        opacity: 1;
+    }
+
+    nav {
+        background: rgb(255, 255, 255);
+        width: 100%;
+        height: 100vh;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        left: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.2s ease;
+        z-index: 1;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            line-height: 1.5rem;
+        }
+
+    }
+    nav.active {
+        left: 0;
+    }
+
+    .bars-container {
+        width: min-content;
+        display: block;
+    }
+    .bar {
+        border: 1px solid #000;
+        width: 20px;
+        margin: 0;
+        display: inline-block; 
+    }
+
+    .header-content {
+        align-items: flex-start;
+    }
+    .header-text {
+        padding: 0;
+
+}
+}
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}

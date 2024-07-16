@@ -1,0 +1,66 @@
+/* Media Queries For Different Screen Sizes */
+
+
+
+/* breakpoint-xs-width: 400px; */
+/* breakpoint-s-width: 768px; */
+/* breakpoint-m-width: 1024px; */
+/* breakpoint-l-width: 1440px; */
+
+
+@media (max-width: 400px) {
+
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        opacity: 1;
+    }
+
+    nav {
+        background: rgb(255, 255, 255);
+        width: 100%;
+        height: 100vh;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        left: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.2s ease;
+        z-index: 1;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            line-height: 1.5rem;
+        }
+
+    }
+    nav.active {
+        left: 0;
+    }
+
+    .bars-container {
+        width: min-content;
+        display: block;
+    }
+    .bar {
+        border: 1px solid #000;
+        width: 20px;
+        margin: 0;
+        display: inline-block; 
+    }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 1440px) {
+
+}
